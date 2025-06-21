@@ -10,6 +10,7 @@ const generateMigraion=require("./lib/generateMigration");
 const { errored } = require("./lib/logHelpers");
 
 function introLog() {
+  if (process.env.XCLI_TEST) return; // skip intro in tests
   console.log();
   console.log(chalk.underline(chalk.green.bold(` ${pckg.name} [V: ${pckg.version}]`), ` [Node: ${process.version.replace('v', '')} ]`));
   console.log();
@@ -42,7 +43,7 @@ program.command("init:db").description("Initializes database configuration file"
   .option('--soft-delete', 'Enable soft delete, adds deletedAt column',false)
   .option("-f, --force", "Forcefully recreates the Model file")
   .addOption(new Option("-t, --timestamps [format]",'Enable timestamps (camel | snake)').choices([false,"camel","snake"]).default(false))
-  .action(generateModel);
+  .action(async()=>await generateModel);
 
 program.command('migration')
   .description("Generates Migration file for the model")

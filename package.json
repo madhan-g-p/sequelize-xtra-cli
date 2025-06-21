@@ -4,7 +4,7 @@
   "description": "A Power packed next gen cli for sequelize ORM",
   "main": "index.js",
   "bin": {
-    "sequelize-dev-xcli": "./index.js"
+    "sequelize-xcli": "./index.js"
   },
   "files": [
     "lib",
@@ -12,7 +12,23 @@
     "index.js"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --runInBand --detectOpenHandles",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/test"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "lib/**/*.js"
+    ]
   },
   "keywords": [
     "sequelize",
@@ -26,8 +42,11 @@
     "prettier": "^3.5.3"
   },
   "devDependencies": {
-    "dotenv": "^16.4.7",
-    "mysql2": "^3.13.0",
-    "sequelize": "^6.37.5"
+    "dotenv": "^16.5.0",
+    "husky": "^9.1.7",
+    "jest": "^30.0.2",
+    "lint-staged": "^16.1.2",
+    "mysql2": "^3.14.1",
+    "sequelize": "^6.37.7"
   }
 }
