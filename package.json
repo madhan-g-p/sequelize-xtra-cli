@@ -9,7 +9,8 @@
   "files": [
     "lib",
     "assets",
-    "index.js"
+    "index.js",
+    "package.json"
   ],
   "scripts": {
     "test": "jest test/sequential.test.js",

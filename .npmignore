@@ -1,0 +1,6 @@
+**/.env
+test/
+coverage/
+***/package-lock.json
+.husky/
+node_modules
