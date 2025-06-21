@@ -1,0 +1,33 @@
+{
+  "name": "sequelize-xcli",
+  "version": "1.0.0",
+  "description": "A Power packed next gen cli for sequelize ORM",
+  "main": "index.js",
+  "bin": {
+    "sequelize-dev-xcli": "./index.js"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "index.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sequelize",
+    "sequelize-xcli",
+    "cli"
+  ],
+  "author": "Madhana Gopal https://github.com/madhan-g-p",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^13.1.0",
+    "prettier": "^3.5.3"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.7",
+    "mysql2": "^3.13.0",
+    "sequelize": "^6.37.5"
+  }
+}
