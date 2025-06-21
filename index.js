@@ -7,13 +7,13 @@ const chalk = require("chalk");
 const initDatabase = require("./lib/initDatabase");
 const generateModel = require("./lib/generateModel");
 const generateMigraion=require("./lib/generateMigration");
-const { errored } = require("./lib/logHelpers");
+const { log } = require("./lib/logHelpers");
 
 function introLog() {
   if (process.env.XCLI_TEST) return; // skip intro in tests
-  console.log();
-  console.log(chalk.underline(chalk.green.bold(` ${pckg.name} [V: ${pckg.version}]`), ` [Node: ${process.version.replace('v', '')} ]`));
-  console.log();
+  log();
+  log(chalk.underline(chalk.green.bold(` ${pckg.name} [V: ${pckg.version}]`), ` [Node: ${process.version.replace('v', '')} ]`));
+  log();
 }
 introLog();
 program.usage("[command] [options]")
@@ -25,7 +25,7 @@ program.command("init:db").description("Initializes database configuration file"
     (val,prev)=> val ? val.split(",").map(item=>item.trim()): prev, ['local','dev','prod']
   )
   .option("-f, --force", "Forcefully recreates the database configuration")
-  .action(initDatabase);
+  .action(async(options)=>await initDatabase(options));
   program.command("init:model").description("Initializes model folder");
 
   program
@@ -43,23 +43,12 @@ program.command("init:db").description("Initializes database configuration file"
   .option('--soft-delete', 'Enable soft delete, adds deletedAt column',false)
   .option("-f, --force", "Forcefully recreates the Model file")
   .addOption(new Option("-t, --timestamps [format]",'Enable timestamps (camel | snake)').choices([false,"camel","snake"]).default(false))
-  .action(async()=>await generateModel);
+  .action(generateModel);
 
 program.command('migration')
   .description("Generates Migration file for the model")
   .option("--mp, --model-path [model-path]","Define path of model to refer to")
   .option("--fn, --file-name [file-name]","Define name of the migration file")
-  .hook("preAction",(thisCommand)=>{
-    const {modelPath,fileName} = thisCommand.opts();
-    if(!modelPath && !fileName){
-      errored("You must provide either model path or file name")
-      process.exit(1);
-    }
-    if(modelPath && fileName){
-      errored("You cannot provide both model path and file name together")
-      process.exit(1);
-    }
-  })
   .action(generateMigraion);
 
 program.parse();

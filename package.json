@@ -12,21 +12,20 @@
     "index.js"
   ],
   "scripts": {
-    "test": "jest --runInBand --detectOpenHandles",
-    "test:watch": "jest --watch",
-    "test:cov": "jest --coverage"
+    "test": "jest test/sequential.test.js",
+    "test:cov": "jest test/sequential.test.js --coverage"
   },
   "jest": {
     "testEnvironment": "node",
     "roots": [
       "<rootDir>/test"
     ],
+    "coverageReporters": ["text","lcov"],
     "moduleFileExtensions": [
       "js",
       "json"
     ],
     "collectCoverageFrom": [
-      "src/**/*.js",
       "lib/**/*.js"
     ]
   },
