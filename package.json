@@ -1,10 +1,10 @@
 {
-  "name": "sequelize-xcli",
+  "name": "sequelize-xtra-cli",
   "version": "1.0.0",
   "description": "A Power packed next gen cli for sequelize ORM",
   "main": "index.js",
   "bin": {
-    "sequelize-xcli": "./index.js"
+    "sequelize-xtra-cli": "./index.js"
   },
   "files": [
     "lib",
@@ -32,7 +32,7 @@
   },
   "keywords": [
     "sequelize",
-    "sequelize-xcli",
+    "sequelize-xtra-xcli",
     "cli"
   ],
   "author": "Madhana Gopal https://github.com/madhan-g-p",

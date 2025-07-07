@@ -1,9 +1,9 @@
 ```bash
-npx sequelize-xcli -h
+npx sequelize-xtra-cli -h
 ```
-sequelize-xcli [V: 1.0.0]  [Node: 22.14.0 ]
+sequelize-xtra-cli [V: 1.0.0]  [Node: 22.14.0 ]
 
-Usage: sequelize-xcli [command] [options]
+Usage: sequelize-xtra-cli [command] [options]
 
 A Power packed next gen cli for sequelize ORM
 
@@ -25,10 +25,10 @@ Commands:
 
 
 ```bash
-npx sequelize-xcli init:db -h
+npx sequelize-xtra-cli init:db -h
 ```
 
-Usage: sequelize-xcli init:db [options]
+Usage: sequelize-xtra-cli init:db [options]
 
 Initializes database configuration file
 
@@ -41,10 +41,10 @@ Options:
 | -h, --help         | display help for command                                                        |
 
 ```bash
-npx sequelize-xcli model -h
+npx sequelize-xtra-cli model -h
 ```
 
-Usage: sequelize-xcli model [options]
+Usage: sequelize-xtra-cli model [options]
 
 Generate a Sequelize model
 
@@ -67,10 +67,10 @@ Options:
 | -h, --help                                           | display help for command                                                                                                                         |
 
 ```bash
-npx sequelize-xcli migration -h
+npx sequelize-xtra-cli migration -h
 ```
 
-Usage: sequelize-xcli migration [options]
+Usage: sequelize-xtra-cli migration [options]
 
 Generates Migration file for the model
 

@@ -6,7 +6,7 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
    - If you distribute or modify the Software (including in derivative works), you must give clear credit to the original author:  
      - Name: Madhan G P  
      - GitHub Profile: https://github.com/madhan-g-p  
-     - Original Repository: [link to your repository](https://github.com/madhan-g-p/sequelize-xcli)  
+     - Original Repository: [link to your repository](https://github.com/madhan-g-p/sequelize-xtra-cli)  
    - The attribution must be visible in your documentation, about page, and/or any public-facing place wherever the Software or its substantial portions are used.
 
 2. **Commercial Use:**  
