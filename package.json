@@ -1,6 +1,6 @@
 {
   "name": "sequelize-xtra-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Power packed next gen cli for sequelize ORM",
   "main": "index.js",
   "bin": {
@@ -38,6 +38,7 @@
     "cli"
   ],
   "author": "Madhana Gopal https://github.com/madhan-g-p",
+  "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^13.1.0",
