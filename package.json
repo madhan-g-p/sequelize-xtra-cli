@@ -1,6 +1,6 @@
 {
   "name": "sequelize-xtra-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Power packed next gen cli for sequelize ORM",
   "main": "index.js",
   "bin": {
