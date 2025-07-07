@@ -10,7 +10,9 @@
     "lib",
     "assets",
     "index.js",
-    "package.json"
+    "package.json",
+    "LICENSE",
+    "LICENSE.md"
   ],
   "scripts": {
     "test": "jest test/sequential.test.js",
