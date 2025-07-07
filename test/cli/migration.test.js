@@ -4,9 +4,7 @@ const runCli = require('../utils/runCli');
 const cleanDemoAppDirs = require('../utils/cleanDemoApp');
 
 const demoAppDir = path.join(__dirname, '../demo-app');
-const modelsDir = path.join(demoAppDir, 'models');
 const migrationsDir = path.join(demoAppDir, 'migrations');
-const modelPath = path.join(modelsDir, 'User.js');
 
 beforeAll(() => {
   cleanDemoAppDirs(["migrations"]);

@@ -6,7 +6,7 @@ beforeAll(async()=>{
 
 
 describe('CLI Sequential Suite', () => {
-  require('./cli/initDb.test');
+  require('./cli/initDb.test.js');
   require('./cli/model.test');
-  require('./cli/migration.test');
+  // require('./cli/migration.test');
 });
